@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+
+</head>
+
+<body>
+    <section id="nav" class="fixed-top d-flex">
+        <div id="nav-inner" class="nav-inner d-flex flex-column justify-content-between">
+            <div class="choices">
+            <h3 onclick="displaySearch(),closenav(),hideMealDetails()">Search</h3>
+            <h3 id="category" onclick="category(),hideMealDetails()">Categories</h3>
+            <h3 onclick="area(),hideMealDetails()">Area</h3>
+            <h3 onclick="ingredients(),hideMealDetails()">Ingrediants</h3>
+            <h3 onclick="contactUs()">Contact Us</h3>
+            </div>
+
+            <div class="socialIcons">
+                <i class="fa-brands fa-facebook text-white"></i>
+                <i class="fa-brands fa-twitter text-white"></i>
+                <i class="fa-solid fa-globe text-white"></i>
+                <div class="footer text-white">
+                    <p >Copyright Â© 2019 All Rights <br>Reserved.</p>
+                </div>
+            </div>
+
+            
+
+
+
+
+        </div>
+        <div class="nav-outer bg-white text-black d-flex flex-column justify-content-between">
+
+            <img src="Images/logo.png" alt="" class="logo mx-2 my-3">
+
+            <i id="open"  class="fa-solid open-close-icon fa-align-justify fa-2x mx-auto"></i>
+            <i id="close" onclick="closeNav()" class="fa-solid fa-x fa-2x mx-auto"></i>
+            <div class="share mx-auto pb-3">
+                <i class="fa-solid fa-globe d-block pb-1"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="search">
+        <div class="container pt-4">
+            <div class="row searching">
+                <div class="col-md-6">
+                    <input type="text" class="form-control bg-black text-white" placeholder="Search By Name" id="nameSearch" onkeyup="nameSearchType()">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" id="letterSearch" class="form-control bg-black text-white" placeholder="Search By First Letter" maxlength="1">
+                </div>
+            </div>
+        </div>
+       
+    </section>
+    <div class="container pt-5">
+        <div class="row" id="mealPaage">
+            
+        </div>
+    </div>
+    <div class="container pt-5">
+
+        <div id="allMeals" class="row">
+
+        </div>
+    </div>
+
+
+
+    <section id="contactUs">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <input id="nameInput" type="text" placeholder="Enter your name" class="form-control my-3" >
+                    <p class="alert alert-danger mt-2 d-none name-validation">
+                        Special characters and numbers not allowed
+                    </p>
+                 </div>
+                <div class="col-md-6">
+                    <input id="emailInput" type="email" placeholder="Enter your email" class="form-control my-3" >
+                    <p class="alert alert-danger mt-2 d-none email-validation">
+                        Email not valid *exemple@yyy.zzz
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <input id="phoneInput" type="number" placeholder="Enter your phone number" class="form-control my-3" >
+                    <p class="alert alert-danger mt-2 d-none phone-validation">
+                        Enter valid Phone Number
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <input maxlength="3" id="ageInput" type="number" placeholder="Enter your age" class="form-control my-3" >
+                    <p class="alert alert-danger mt-2 d-none age-validation">
+                        Enter valid age
+                    </p>
+                 </div>
+                <div class="col-md-6">
+                    <input id="passInput" type="password" placeholder="Enter your password" class="form-control my-3" >
+                    <p class="alert alert-danger mt-2 d-none pass-validation">
+                        Enter valid password *Minimum eight characters, at least one letter and one number:*
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <input id="Repassword" type="password" placeholder="RePassword" class="form-control my-3" >
+                    <p class="alert alert-danger mt-2 d-none rePass-validation">
+                        Enter valid Repassword
+                    </p>
+                </div>
+            </div>
+<div class="btn d-flex justify-content-center">
+    <button id="Sbtn" class="btn btn-outline-danger contact-btn " disabled>Submit</button>
+
+</div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="JS/jquery-3.7.1.js"></script>
+    <script src="JS/Main.js"></script>
+</body>
+
+</html>
